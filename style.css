@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+.hero-header {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo img {
+  width: 80px;
+  height: 70%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffcc00;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.language-select {
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.language-select:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-underline {
+  width: 100%;
+  height: 90px;
+  background-color: rgb(192, 189, 189);
+  position: absolute;
+  opacity: 0.5;
+  top: 10px;
+  left: 0;
+  z-index: 2;
+}
+
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('your-image.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.poetic-lines {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #fefefe;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  font-style: italic;
+  max-width: 800px;
+  margin: auto;
+}
+
+
+
+
+.site-footer {
+  background-color: #0d0c0c;
+  color: #eee;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+
+.site-footer {
+  background-color: #b9a4a4;
+  color: #eee;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.social-links a {
+  color: #eee;
+  margin: 0 10px;
+  font-size: 24px;
+  text-rendering: pink blue;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #a42323; 
+}
+
+.footer-bottom {
+  font-size: 14px;
+  color: #aaa;
+}
