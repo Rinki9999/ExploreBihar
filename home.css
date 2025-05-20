@@ -121,8 +121,10 @@ body {
 
   .container {
     max-width: 1000px;
-    margin: auto;
+    margin-top:70px ;
     padding: 20px;
+    text-align: center;
+
   }
 
   .section {
@@ -240,7 +242,7 @@ body {
   }
   
   .gallery-item:hover .overlay {
-    opacity: 2;
+    opacity: 1;
   }
   details{
     text-align: center;
@@ -295,4 +297,5 @@ body {
     transform: scale(1.05);
   }
 
- 
+
+  
