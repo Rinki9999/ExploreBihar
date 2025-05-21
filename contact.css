@@ -3,23 +3,24 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
 }
 
 .form-container {
     min-height: 100vh;
     width: 100%;
     background-position: center;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color:linear-gradient(to bottom, #67e8f9, #a7cfeb);
+
 }
 
 .form-container::after {
     content: "";
-    background-color:linear-gradient(to bottom, #95dfe9, #a7cfeb);
     position: absolute;
     inset: 0;
     opacity: 0.7;
@@ -33,7 +34,7 @@
 }
 
 .contact-form {
-    background-color: white;
+    background-color: rgb(196, 241, 245);
     width: 30%;
     padding: 1.5rem 2.5rem;
     border-radius: 8px;

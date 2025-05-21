@@ -6,43 +6,13 @@ body {
     color: #333;
   }
   
-  .hero-header {
-    background-color: linear-gradient(#fdfaf6, #f2efe7);
-    color:black;
-    padding: 15px 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-  }
   
-  .overlay-content {
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    margin: 0 12px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
   
   .nav-links a:hover {
     color: #ffcc80;
   }
   
-  .nav-links select {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none;
-  }
+
   
   .container {
     max-width: 1400px;
@@ -109,11 +79,13 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 20px;
+    
   }
   
   .gallery-item {
     position: relative;
     overflow: hidden;
+    
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s;
