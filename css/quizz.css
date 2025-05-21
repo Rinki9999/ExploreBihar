@@ -1,0 +1,136 @@
+/* quizz */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .quiz-container {
+    background: #ffffff;
+    padding: 200px 200px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: green;
+  }
+  h2{
+    text-align: center;
+    color: orange;
+  }
+  .question {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .options label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .correct {
+    color: rgb(15, 57, 15);
+  }
+  
+  .incorrect {
+    color: red;
+  }
+  
+  .navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: orange;
+  }
+  
+  /* Comment form styles */
+  .comment-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  
+  .comment-form input,
+  .comment-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .comment-form button {
+    background-color: rgb(6, 77, 6);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .comment-form button:hover {
+    background-color:orange;
+  }
+  
+  #commentSection {
+    margin-top: 20px;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  
+  #commentList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #commentList li {
+    background: #eef6ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #0077cc;
+    position: relative;
+  }
+  
+  .comment-delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #cc3300;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 3px 7px;
+    font-size: 12px;
+  }
+  
+  .comment-delete-btn:hover {
+    background: #991f00;
+  }
+    
+  
