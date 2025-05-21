@@ -18,17 +18,16 @@
       <nav class="nav-links">
     <a href="../ExploreBihar/destination.html">Bihar Highlights</a>
     <a href="./index.html">Home</a>
-    <a href="#">Quiz</a>
-    <a href="#">Contact</a>
+    <a href="./html/quizz.html">Quiz</a>
+    <a href="./contact.html">Contact</a>
             <select id="language-select" name="language">
+              <option>🌐</option>
       <option value="en">English</option>
       <option value="hi">हिन्दी</option>
-      <option value="maithili">मैथिली</option>
-      <option value="bhojpuri">भोजपुरी</option>
+     
     </select>   
   </nav>
 </div>
-          <div class="nav-underline"></div>  
 
 
 <body>
@@ -38,7 +37,10 @@
             <div class="destination-card">
                 <img src="./images/madhubani.jpg" alt="pic1">
                 <h3> Madhubani</h3>
-                <a href="../ExploreBihar/html/madhubani.html" class="btn">Know More</a>
+                <a id="know-more-btn" href="../ExploreBihar/html/madhubani.html" class="btn">Know More</a>
+                <div id="meme-container">
+                    <img id="meme-image" src="./images/funny-meme.jpg" alt="Funny Meme" />
+                  </div>
             </div>
             <div class="destination-card">
                 <img src="./images/vaisali.jpg" alt="pic2">
@@ -79,6 +81,26 @@
         </div>
     </div>
 
-</body>
 
+
+    
+</body>
+<script>
+    const btn = document.getElementById("know-more-btn");
+    const memeContainer = document.getElementById("meme-container");
+  
+    btn.addEventListener("click", () => {
+      // Hide button
+      btn.style.display = "none";
+  
+      // Show meme container
+      memeContainer.style.display = "block";
+  
+      // Wait 3.5 seconds, then go to next page
+      setTimeout(() => {
+        window.location.href = "./destination.html"; // Change to your page
+      }, 3500);
+    });
+  </script>
+  
 </html>
