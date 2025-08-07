@@ -7,6 +7,7 @@
   <title>Explore Bihar</title>
   <link rel="stylesheet" href="./style..css" />
 
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
 
 </head>
@@ -14,7 +15,6 @@
 <body>
 
   <header class="hero-header">
-    <!-- <img src="./biharimg/frontpic.jpg" alt="Bihar" class="header-bg-img" /> -->
 
     <div class="overlay-content">
       <div class="logo">
@@ -28,8 +28,9 @@
         <a href="./contact.html">Contact</a>
 
         <select id="language-select" name="language">
-          <option value="en">English</option>
           <option value="hi">हिन्दी</option>
+          <option value="en">English</option>
+
 
         </select>
 
@@ -41,6 +42,7 @@
 
     <!-- Image Slider / Carousel Section -->
     <section class="image-carousel">
+      <h1 class="hero-title" id="heroText">जहाँ इतिहास बोलता है, वही है बिहार</h1>
       <div class="carousel-container">
         <div class="carousel-slide fade">
           <img src="./images/riversise.webp" alt="Rajgir">
@@ -73,23 +75,75 @@
     </section>
 
   </header>
+  <section class="hero-section1">
+    <h2 class="section-title">Pride of Bihar</h2>
+  
+    <div class="hero-cards">
+      <!-- Card 1 -->
+      <div class="hero-card" data-aos="fade-up">
+        <img src="./images/Aryabhatta.jpg" alt="Aryabhata" />
+        <h3>Aryabhata</h3>
+        <p>Renowned mathematician and astronomer credited with the invention of zero.</p>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="hero-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="./images/champaa2.webp" alt="Champa Flower" />
+        <h3>Champa Flower</h3>
+        <p>The state flower of Bihar, symbolizing purity and beauty.</p>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="hero-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="./images/वीर-कुंवर-सिंह.webp" alt="Veer Kunwar Singh" />
+        <h3>Veer Kunwar Singh</h3>
+        <p>Legendary freedom fighter who led the 1857 revolt from Bihar.</p>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="hero-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="./images/chandragupta.jpg" alt="Chandragupta Maurya" />
+        <h3>Chandragupta Maurya</h3>
+        <p>The warrior emperor from Bihar who founded the Maurya Empire.</p>
+      </div>
+  
+      <!-- Card 5 -->
+      <div class="hero-card" data-aos="fade-up" data-aos-delay="400">
+        <img src="./images/litti.avif" alt="Litti" />
+        <h3>Litti Chokha</h3>
+        <p>Litti Chokha is a traditional dish of Bihar made with roasted wheat balls stuffed with spices, served with mashed vegetables. It represents the simplicity and earthy flavors of Bihari cuisine.</p>
+    </div>
+    <div class="hero-card" data-aos="fade-up" data-aos-delay="500">
+        <img src="./images/chhatpuja.webp" alt="chhat puja" />
+        <h3>Chhath Puja</h3>
+        <p>Chhath Puja is one of the most significant festivals of Bihar, dedicated to the Sun God. Celebrated with devotion and rituals along riverbanks, it showcases Bihar’s spiritual depth and cultural richness.
+        </p>
+      </div>
+      <div class="hero-card" data-aos="fade-up" data-aos-delay="600">
+        <img src="./images/madhubani4.jpg" alt="Mahabodhi Temple" />
+        <h3>Madhubani Painting</h3>
+        <p>Madhubani painting, also known as Mithila art, is a traditional folk art form from Bihar. Known for its vibrant colors and intricate patterns, it is created using fingers, twigs, and natural dyes — often depicting mythological themes.</p>
+    </div>
+    <div class="hero-card" data-aos="fade-up" data-aos-delay="700">
+        <img src="./images/nava nalanda mahaviraP.webp" alt="Mahabodhi Temple" />
+        <h3>Nalanda</h3>
+        <p>Before Oxford or Harvard, Nalanda University (5th century) had over 10,000 students and 2,000 teachers from across Asia, with a massive library and structured education system.</p>
+      </div>
+    </div>
+  </section>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-section">
-        <h2>Bihar Darshan</h2>
-        <h3>🧭 Why Us?</h3>
+        <h3> Why Us?</h3>
         <p>
           If you are someone who loves exploring historical and ancient places, then this website is your perfect travel companion. Here, you'll find detailed and reliable information about the most iconic destinations — from rich history and cultural stories to must-visit spots, local homestays, and travel tips. Whether you're planning a trip or just curious about India's timeless heritage, this platform will guide you every step of the way. Discover hidden gems, know the best time to visit, and explore the beauty of India's past — all in one place.
         </p>
-
-        
-        
-        
       </div>
       <div class="footer-section">
         <h3>Contact Us</h3>
-        <p>Email: neha24@navgurukul.org</p>
+        <p>Email: rinkinisha24@navgurukul.org</p>
         <p>Phone: +91 7654164893</p>
         <div class="social-links">
           <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -111,7 +165,7 @@
           <h3>About Us</h3>
           <p>We are passionate storytellers of India's rich cultural heritage. Our goal is to help travelers and culture enthusiasts discover timeless destinations with accurate, engaging, and insightful content.</p>
         </div>
-        
+
       </div>
       
       <div class="footer-section">
@@ -139,6 +193,24 @@
       setTimeout(showSlides, 3000); // Change image every 3 seconds
     };
     showSlides();
+
+    const languageSelect = document.getElementById("language-select");
+  const heroText = document.getElementById("heroText");
+
+  const texts = {
+    en: `Where History Speaks – That is Bihar`,
+    hi: `जहाँ इतिहास बोलता है, वही है बिहार`
+  };
+
+  languageSelect.addEventListener("change", (e) => {
+    const selectedLang = e.target.value;
+    heroText.textContent = texts[selectedLang];
+  });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
 </body>
 </html>
