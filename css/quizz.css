@@ -1,136 +1,203 @@
-/* quizz */
-
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-    margin: 0;
-    padding: 20px;
-    color: #333;
-  }
-  
-  .quiz-container {
-    background: #ffffff;
-    padding: 200px 200px;
-    border-radius: 10px;
-    max-width: 700px;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    color: green;
-  }
-  h2{
-    text-align: center;
-    color: orange;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  margin: 0;
+  padding: 20px;
+  color: #00796b;
+}
+
+/* Quiz Container */
+.quiz-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+/* Question */
+.question {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Options */
+.options label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.options label:hover {
+  background: #e0f2f1;
+}
+
+.correct {
+  color: rgb(15, 57, 15);
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+/* Navigation Buttons */
+.navigation {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 25px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
+}
+
+/* Comment Form */
+.comment-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border 0.3s ease;
+  width: 100%;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: #00796b;
+  outline: none;
+}
+
+.comment-form button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.comment-form button:hover {
+  background-color: #004d40;
+}
+
+/* Comment List */
+#commentSection {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+#commentList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#commentList li {
+  background: #eef6ff;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #00796b;
+  position: relative;
+}
+
+.comment-delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #cc3300;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 3px 7px;
+  font-size: 12px;
+}
+
+.comment-delete-btn:hover {
+  background: #991f00;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+ 
   .question {
-    font-size: 20px;
-    margin-bottom: 10px;
+      font-size: 18px;
   }
-  
-  .options label {
-    display: block;
-    margin-bottom: 8px;
-    cursor: pointer;
-  }
-  
-  .correct {
-    color: rgb(15, 57, 15);
-  }
-  
-  .incorrect {
-    color: red;
-  }
-  
-  .navigation {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
+
   button {
-    padding: 10px 20px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+      width: 100%;
   }
-  
-  button:hover {
-    background-color: orange;
+
+  .navigation {
+      flex-direction: column;
+      gap: 12px;
   }
-  
-  /* Comment form styles */
-  .comment-form {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 600px;
-    margin-inline: auto;
+}
+
+@media (max-width: 480px) {
+  .quiz-container {
+      padding: 15px;
   }
-  
-  .comment-form input,
-  .comment-form textarea {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+  h1 {
+      font-size: 22px;
   }
-  
-  .comment-form button {
-    background-color: rgb(6, 77, 6);
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
+
+  h2 {
+      font-size: 18px;
   }
-  
-  .comment-form button:hover {
-    background-color:orange;
+
+  .question {
+      font-size: 16px;
   }
-  
-  #commentSection {
-    margin-top: 20px;
-    max-width: 600px;
-    margin-inline: auto;
-  }
-  
-  #commentList {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  #commentList li {
-    background: #eef6ff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    border-left: 4px solid #0077cc;
-    position: relative;
-  }
-  
-  .comment-delete-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #cc3300;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 3px 7px;
-    font-size: 12px;
-  }
-  
-  .comment-delete-btn:hover {
-    background: #991f00;
-  }
-    
-  
+}
