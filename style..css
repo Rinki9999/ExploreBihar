@@ -20,15 +20,15 @@ body {
   margin-bottom: 0;
 }
 
-.header-bg-img {
-  width: 100%;
+ .header-bg-img {
+   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  /* z-index: 1; */
-}
+  z-index: 1; 
+} 
 
 .overlay-content {
   position: fixed;
@@ -39,9 +39,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 20px;
-  background: rgba(32, 27, 27, 0.7);
-  backdrop-filter: blur(5px);
+  padding: 0px 20px;
+  background: whitesmoke; /* Lighter background */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
 .logo img {
@@ -117,10 +118,10 @@ body {
 
 .nav-links a {
   position: relative;
-  color: #fff;
+  color: #333; /* Dark text for contrast */
   text-decoration: none;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
   padding-bottom: 4px;
   transition: color 0.3s;
 }
@@ -131,9 +132,9 @@ body {
   bottom: 0;
   left: 0;
   width: 0%;
-  height: 3px;
-  background-color: #ffcc00;
-  transition: width 0.4s ease;
+  height: 2px;
+  background-color: #009688; /* fresh teal underline */
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
@@ -141,7 +142,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ffcc00;
+  color: green;
 }
 
 /* Language Dropdown */
@@ -149,15 +150,16 @@ body {
   padding: 6px 10px;
   font-size: 16px;
   border-radius: 5px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.9);
   color: #333;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.language-select:hover {
-  background-color: #e0e0e0;
+#language-select:hover {
+  background-color: #f0f0f0;
+  border-color: #009688;
 }
 
 /* Hero Title */
@@ -342,5 +344,120 @@ body {
   color: #555;
 }
 
+/* ===================== Responsive Design ===================== */
+
+/* Tablets & below (≤ 1024px) */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-card {
+    padding: 15px;
+  }
+
+  .hero-card img {
+    height: 180px;
+  }
+
+  .intro-text h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile Landscape & below (≤ 768px) */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    padding: 0 10px;
+  }
+
+  .hero-section1 {
+    padding: 20px 0;
+  }
+
+  .hero-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+    padding: 0 15px;
+  }
+
+  .intro-image {
+    max-width: 90%;
+  }
+
+  .poetic-lines {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Portrait & Small Devices (≤ 480px) */
+@media (max-width: 480px) {
+  .overlay-content {
+    flex-direction: column;
+   
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero-card p {
+    font-size: 0.9rem;
+  }
+
+  .poetic-lines {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .intro-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+  }
+}
 
 

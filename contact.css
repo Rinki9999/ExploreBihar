@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color:linear-gradient(to bottom, #67e8f9, #a7cfeb);
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
 
 }
 
@@ -28,7 +28,7 @@
 }
 
 .form-container h1 {
-    color: darkgreen;
+    color:  #00796b;
     font-size: 3rem;
     margin-bottom: 20px;
 }
@@ -89,7 +89,7 @@ input[type="submit"] {
     width: 100%;
     border: none;
     font-size: 1.6rem;
-    background-color: green;
+    background-color:  #00796b;
     cursor: pointer;
     color: white;
     padding: 0.8rem;
@@ -99,6 +99,6 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: rgb(51, 175, 51);
+    background-color:  #16534c;
     transform: scale(1.02);
 }

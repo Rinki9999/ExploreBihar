@@ -2,12 +2,11 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: rgb(36, 75, 36);
     color: #333;
 }
 
 .destination {
-  margin: 0;
+    margin: 0;
     padding: 100px 200px;
     text-align: center;
     background: linear-gradient(to bottom, #e0f7fa, #ffffff);
@@ -83,8 +82,9 @@ body {
     background-color: #004d40;
     transform: scale(1.05);
 }
-a{
-  text-decoration: none;
+
+a {
+    text-decoration: none;
 }
 
 /* Animations */
@@ -98,10 +98,36 @@ a{
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive tweaks (optional) */
-@media (max-width: 600px) {
+/* ================= Responsive Tweaks ================= */
+
+/* Tablets & below */
+@media (max-width: 1024px) {
+    .destination {
+        padding: 80px 100px;
+    }
+
+    .destination h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobiles landscape & below */
+@media (max-width: 768px) {
+    .destination {
+        padding: 60px 40px;
+    }
+
     .destination h1 {
         font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .destination-card img {
+        height: 160px;
+    }
+
+    .destination-card h3 {
+        font-size: 1.1rem;
     }
 
     .btn {
@@ -110,6 +136,27 @@ a{
     }
 }
 
+/* Small mobile portrait */
+@media (max-width: 480px) {
+   
+    .destination h1 {
+        font-size: 1.6rem;
+    }
 
+    .destination-container {
+        gap: 20px;
+    }
 
+    .destination-card img {
+        height: 140px;
+    }
 
+    .destination-card h3 {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 7px 18px;
+    }
+}
