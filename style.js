@@ -167,4 +167,37 @@ const quizData = [
     }
   });
   
+
+  function showResult() {
+  let score = 0;
+  let output = "<h3>🎯 Result:</h3><ul>";
+  quizData.forEach((q, i) => {
+    const userAns = userAnswers[i];
+    const isCorrect = userAns === q.answer;
+    if (isCorrect) score++;
+    output += `<li>
+      <strong>Q${i + 1}: ${q.question}</strong><br/>
+      Your answer: <span class="${isCorrect ? 'correct' : 'incorrect'}">${userAns || 'Not answered'}</span><br/>
+      Correct answer: <span class="correct">${q.answer}</span>
+    </li><br/>`;
+  });
+  output += `</ul><h3>✅ Score: ${score} / ${quizData.length}</h3>`;
+
+  // 🎯 Add Start Again button
+  output += `<button id="restartBtn" class="restart-btn">🔄 Start Again</button>`;
+
+  resultBox.innerHTML = output;
+
+  // Add event listener for restart button
+  document.getElementById("restartBtn").addEventListener("click", restartQuiz);
+}
+
+// Restart quiz function
+function restartQuiz() {
+  currentQ = 0;
+  userAnswers = [];
+  resultBox.innerHTML = "";
+  loadQuestion(currentQ);
+}
+
   loadComments();
