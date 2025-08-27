@@ -223,37 +223,39 @@ body {
 .site-footer {
   background: linear-gradient(to right, #232526, #414345);
   color: #fff;
-  padding: 40px 0 20px;
+  padding: 40px 0 25px;   /* 👈 upar-niche padding thoda badhaya */
   font-family: 'Segoe UI', sans-serif;
+  width: 100%;            /* 👈 footer full width cover kare */
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;  /* 👈 equal gap between sections */
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 1200px;              /* 👈 thoda bada area */
   margin: auto;
-  padding: 0 20px;
+  padding: 0 30px;                /* 👈 andar ka spacing badhaya */
+  gap: 30px;                      /* 👈 sections ke beech proper gap */
 }
 
 .footer-section {
-  flex: 1 1 250px;
-  margin: 20px;
+  flex: 1 1 250px;                /* 👈 har section ko proper width */
+  margin: 10px 20px;              /* 👈 thoda space left-right */
 }
 
 .footer-section h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 18px;
+  margin-bottom: 12px;
   border-bottom: 2px solid #ffcc00;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 }
 
 .footer-section p,
 .footer-section a {
   color: #ccc;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.6;               /* 👈 text ke beech thoda gap */
   text-decoration: none;
 }
 
@@ -261,9 +263,13 @@ body {
   color: #ffcc00;
 }
 
+.social-links {
+  margin-top: 10px;
+}
+
 .social-links a {
-  margin: 0 10px;
-  font-size: 22px;
+  margin: 0 12px;                 /* 👈 icons ke beech jyada gap */
+  font-size: 20px;
   color: #ccc;
   transition: color 0.3s ease;
 }
@@ -274,10 +280,11 @@ body {
 
 .footer-bottom {
   text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
+  margin-top: 25px;               /* 👈 content ke niche space */
+  font-size: 13px;
   color: #aaa;
 }
+
 /* Image Carousel */
 .image-carousel {
   width: 100%;
@@ -460,4 +467,18 @@ body {
   }
 }
 
+.restart-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff9800;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.restart-btn:hover {
+  background: #e68900;
+}
 
