@@ -482,3 +482,95 @@ body {
   background: #e68900;
 }
 
+/* container */
+.hl-section {
+  padding: 20px 0;
+  overflow: hidden;
+}
+.hl-title {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 0 14px;
+}
+
+/* marquee wrapper */
+.hl-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
+}
+
+/* scrolling track */
+.hl-track {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap; /* add this */
+  transform: translateX(0); /* initial position */
+  transition: none;
+}
+
+.hl-marquee:hover .hl-track {
+  animation-play-state: paused;      /* pause on hover */
+}
+
+/* card */
+.hl-card {
+  min-width: 240px;
+  max-width: 240px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.hl-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+/* image */
+.hl-card img {
+  display: block;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+/* text */
+.hl-body {
+  padding: 12px 14px;
+}
+.hl-body h3 {
+  font-size: 1rem;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+.hl-body p {
+  font-size: .92rem;
+  margin: 0;
+  color: #444;
+  line-height: 1.35;
+}
+
+/* animation keyframes */
+@keyframes hl-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* since we duplicated the 7 cards once */
+}
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .hl-card { min-width: 210px; max-width: 210px; }
+  .hl-card img { height: 120px; }
+  .hl-title { font-size: 1.4rem; }
+}
+@media (max-width: 480px) {
+  .hl-card { min-width: 190px; max-width: 190px; }
+  .hl-card img { height: 110px; }
+  .hl-title { font-size: 1.25rem; }
+}
