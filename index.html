@@ -22,7 +22,7 @@
       </div>
 
       <nav class="nav-links">
-        <a href="./destination.html">Bihar Highlights</a>
+        <a href="./destination.html">Top Destinations</a>
         <a href="./index.html">Home</a>
         <a href="./html/quizz.html">Quiz</a>
         <a href="./contact.html">Contact</a>
@@ -130,6 +130,74 @@
   </section>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<section class="hl-section" aria-label="Highlights of Bihar">
+  <h2 class="hl-title">Highlights of Bihar</h2>
+
+  <div class="hl-marquee">
+    <div class="hl-track">
+      <!-- 7 unique cards -->
+      <article class="hl-card">
+        <img src="/ExploreBihar/images/soryavansham.webp" alt="Vaibhav Suryavanshi">
+        <div class="hl-body">
+          <h3>Vaibhav Suryavanshi: IPL's Youngest Sensation</h3>
+          <p>Bihar's 14-year-old Vaibhav Suryavanshi became the youngest player in IPL history, debuting for Rajasthan Royals in 2025.</p>
+        </div>
+      </article>
+
+      <article class="hl-card">
+        <img src="/ExploreBihar/images/kheloindia1.jpg" alt="Khelo India Youth Games 2025">
+        <div class="hl-body">
+          <h3>Khelo India Youth Games 2025</h3>
+          <p>Bihar hosted the 2025 edition of Khelo India Youth Games, featuring over 10,000 athletes across 28 sports in Patna, Rajgir, Gaya, Bhagalpur, and Begusarai.</p>
+        </div>
+      </article>
+
+      <article class="hl-card">
+        <img src="/ExploreBihar/images/Patna-Metro-pic.webp" alt="Patna Metro Project">
+        <div class="hl-body">
+          <h3>Patna Metro Project</h3>
+          <p>The Patna Metro project is underway, aiming to improve urban mobility and reduce traffic congestion in the city.</p>
+        </div>
+      </article>
+
+      <article class="hl-card">
+        <img src="/ExploreBihar/images/biharbudget.jpeg" alt="Bihar Budget 2025-26">
+        <div class="hl-body">
+          <h3>Bihar Budget 2025-26</h3>
+          <p>The state budget focuses on infrastructure development, education, and healthcare, with significant allocations for rural areas.</p>
+        </div>
+      </article>
+
+      <article class="hl-card">
+        <img src="/ExploreBihar/images/makhanaExport.png" alt="Makhana Exports from Bihar">
+        <div class="hl-body">
+          <h3>Boost in Makhana Exports</h3>
+          <p>Bihar's makhana exports have seen a surge, contributing significantly to the state's economy.</p>
+        </div>
+      </article>
+
+      <article class="hl-card">
+        <img src="/ExploreBihar/images/school.avif" alt="Education Initiatives in Bihar">
+        <div class="hl-body">
+          <h3>Education Initiatives in Bihar</h3>
+          <p>New educational policies aim to improve literacy rates and provide quality education in rural areas.</p>
+        </div>
+      </article>
+
+      <article class="hl-card">
+        <img src="/ExploreBihar/images/Bihar-tourism.jpg" alt="Tourism Development in Bihar">
+        <div class="hl-body">
+          <h3>Tourism Development in Bihar</h3>
+          <p>Efforts are underway to promote Bihar's rich cultural heritage and historical sites to boost tourism.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+  
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-section">
@@ -212,6 +280,30 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+
+
+
+    const track = document.querySelector('.hl-track');
+let pos = 0;
+
+function animate() {
+  const firstCard = track.querySelector('.hl-card:first-child');
+  const trackWidth = track.offsetWidth;
+  const cardWidth = firstCard.offsetWidth + 16; // include gap
+  pos -= 1; // scroll speed
+
+  // reset pos before gap appears
+  if (Math.abs(pos) >= cardWidth) {
+    pos += cardWidth; 
+    track.appendChild(firstCard); // move first card to end
+  }
+
+  track.style.transform = `translateX(${pos}px)`;
+  requestAnimationFrame(animate);
+}
+
+animate();
+
   </script>
 </body>
 
